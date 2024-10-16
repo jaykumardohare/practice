@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Feedback Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(120deg, red, rgb(219, 219, 240));
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .rating-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .rating-options label {
+            margin-left: 5px;
+            margin-right: 15px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        .terms {
+            margin-bottom: 15px;
+        
+        }
+
+        .terms label {
+            margin-left: 5px;
+        }
+
+        span {
+            color: red;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form>
+            <label for="feedback-type">Feedback type:</label>
+            <select id="feedback-type" name="feedback-type">
+                <option value="compliment">Compliment</option>
+                <option value="Bug">Bug</option>
+                <option value="Suggestion">Suggestion</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <label>Website Rating:</label>
+            <div class="rating-options">
+                <input type="radio" id="excellent" name="rating" value="excellent">
+                <label for="excellent">Excellent</label>
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="excellent">Good</label>
+                <input type="radio" id="average" name="rating" value="average">
+                <label for="excellent">Average</label>
+                <input type="radio" id="poor" name="rating" value="poor">
+                <label for="excellent">Poor</label>
+            </div>
+
+            <label for="age">Age(10-100)</label>
+            <input type="number" id="age" name="age" min="10" max="100">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="password">Password(min. 8 characters):</label>
+            <input type="password" id="password" name="password">
+
+            <label for="website">Website URL (optional)</label>
+            <input type="url" id="website" name="website">
+
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms-condition" value="terms">
+                <label id="terms" for="terms">I agree to the terms and condtions</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
